@@ -62,12 +62,12 @@ export function ThemeCustomizer() {
     })
 
     // Start the tour if it hasn't been shown before
-    const hasSeenTour = localStorage.getItem('theme-customizer-tour-completed')
+    const hasSeenTour = localStorage?.getItem('theme-customizer-tour-completed')
 
     if (!hasSeenTour) {
       tour.start()
       tour.on('complete', () => {
-        localStorage.setItem('theme-customizer-tour-completed', 'true')
+        localStorage?.setItem('theme-customizer-tour-completed', 'true')
       })
     }
 
